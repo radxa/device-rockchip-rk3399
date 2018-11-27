@@ -16,6 +16,7 @@
 
 $(call inherit-product, $(LOCAL_PATH)/rk3399.mk)
 $(call inherit-product, device/rockchip/common/tv/tv_base.mk)
+$(call inherit-product-if-exists, vendor/opengapps/opengapps.mk)
 
 PRODUCT_CHARACTERISTICS := box
 
@@ -30,6 +31,7 @@ PRODUCT_AAPT_PREF_CONFIG := tvdpi
 
 # enable mtp default
 BOARD_USB_ALLOW_DEFAULT_MTP := true
+BUILD_BOX_WITH_GOOGLE_MARKET := true
 
 # debug-logs
 MIXIN_DEBUG_LOGS := false
