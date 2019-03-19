@@ -22,4 +22,7 @@
 # for usb3.0
 /devices/platform/usb@*/*.dwc3*     auto vfat defaults      voldmanaged=usb:auto 
 
+# for nvme
+/devices/platform/*.pcie*           auto auto defaults      voldmanaged=nvme:auto
+
 /dev/block/zram0                                none                swap      defaults                                              zramsize=533413200
